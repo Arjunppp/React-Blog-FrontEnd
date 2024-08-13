@@ -1,0 +1,135 @@
+.App {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    
+  
+}
+
+
+.introSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+.introSection h1 
+{
+    color:rgb(208, 169, 72) ;
+    padding:  15px 0px 15px 0px;
+}
+
+.introSection button ,.createBlog {
+    --c: rgb(208, 169, 72);
+    color: var(--c);
+    font-size: 16px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: 12em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 1em;
+    background: transparent;
+    cursor: pointer;
+}
+
+.introSection button span , .createBlog span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+.introSection button:hover ,.createBlog:hover {
+    color: black;
+}
+
+.introSection button:hover span , .createBlog:hover span {
+    transform: translateY(0) scale(2);
+}
+
+.introSection button span:nth-child(1) ,  .createBlog span:nth-child(1) {
+    --n: 1;
+}
+.introSection button span:nth-child(2) ,.createBlog span:nth-child(2) {
+    --n: 2;
+}
+
+.introSection button span:nth-child(3) , .createBlog span:nth-child(3) {
+    --n: 3;
+}
+
+.introSection button span:nth-child(4) ,.createBlog span:nth-child(4) {
+    --n: 4;
+}
+
+
+.blogCard
+{
+    --c:rgb(208, 169, 72);
+    color: var(--c);
+    font-size: 16px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 1em;
+    background: transparent;
+    width: 700px;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 750px;
+    box-sizing: border-box; 
+    padding: 10px;
+    margin-bottom: 50px;
+}
+form input ,textarea
+{
+    width: 100%;
+}
+form input
+{
+    height: 70px;
+}
+
+form textarea 
+{
+    height: 200px;
+}
+form button 
+{
+    width: 100px;
+
+}
