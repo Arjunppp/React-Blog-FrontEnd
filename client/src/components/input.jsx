@@ -4,11 +4,12 @@ export const Input = ({ setRender, setViewing, setCreate }) => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [isSubmit, setSubmit] = useState(false);
+  const [isNull , setNull] = useState(false);
   const submitChange = (e) => {
     e.preventDefault();
     if(title === '' || content === '')
     {
-
+      setNull(true);
     }
     else{
       setSubmit(true);
@@ -32,10 +33,18 @@ export const Input = ({ setRender, setViewing, setCreate }) => {
           setCreate(false);
         })
         .catch((error) => console.error("Error:", error));
+    };
+    if(isNull === true)
+    {
+      setTimeout(() => {setNull(false)} , 1500)
     }
-  }, [isSubmit]);
+
+  }, [isSubmit , isNull]);
+
+
   return (
     <>
+     {isNull && <h4 className="emptyAlert">Both title and content is requird</h4>}
       <form>
         <input
           type="text"
@@ -56,6 +65,7 @@ export const Input = ({ setRender, setViewing, setCreate }) => {
           Add
         </button>
       </form>
+     
     </>
   );
 };

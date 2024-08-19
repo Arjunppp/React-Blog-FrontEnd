@@ -312,3 +312,9 @@ footer {
 .footer_links li:hover {
     text-decoration: underline;
 }
+
+
+.emptyAlert
+{
+    color: red;
+}
