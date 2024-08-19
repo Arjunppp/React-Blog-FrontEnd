@@ -1,4 +1,4 @@
-.App {
+ .App {
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -23,8 +23,14 @@
     color:rgb(208, 169, 72) ;
     padding:  15px 0px 15px 0px;
 }
-
+.buttons
+{
+    display: flex;
+}
 .introSection button ,.createBlog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     --c: rgb(208, 169, 72);
     color: var(--c);
     font-size: 16px;
@@ -47,6 +53,7 @@
 }
 
 .introSection button span , .createBlog span {
+    
     position: absolute;
     width: 25%;
     height: 100%;
@@ -132,4 +139,176 @@ form button
 {
     width: 100px;
 
+} 
+
+/* .container
+{
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.nav_bar
+{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding: 10px 0;
+}
+h3{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+}
+.pagelist
+{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    font-weight: 700;
+    flex: 1;
+}  */
+
+/* Common container styling */
+.container {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Navbar styling */
+.nav_bar {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    padding: 10px 0;
+}
+
+/* Heading styling */
+h3 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 32px;
+    cursor: pointer;
+    color: rgb(208, 169, 72); /* Matching the color used in introSection h1 */
+    padding: 15px 0; /* Adding padding similar to introSection h1 */
+}
+
+/* Pagelist styling */
+.pagelist {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    font-weight: 700;
+    flex: 1;
+    cursor: pointer;
+    gap: 40px; /* Adding some gap between the list items */
+    color: rgb(208, 169, 72); /* Matching the text color */
+}
+
+.header_btn
+{
+    display: flex;
+}
+/* Button styling */
+.header_btn button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --c: rgb(208, 169, 72);
+    color: var(--c);
+    font-size: 16px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: 8em; /* Adjusting the button width */
+    height: 2.5em; /* Adjusting the button height */
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 2.5em; /* Adjusting line-height */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 1em;
+    background: transparent;
+    cursor: pointer;
+}
+
+.header_btn button span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+.header_btn button:hover {
+    color: black;
+}
+
+.header_btn button:hover span {
+    transform: translateY(0) scale(2);
+}
+
+.header_btn button span:nth-child(1) {
+    --n: 1;
+}
+.header_btn button span:nth-child(2) {
+    --n: 2;
+}
+
+.header_btn button span:nth-child(3) {
+    --n: 3;
+}
+
+.header_btn button span:nth-child(4) {
+    --n: 4;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%; /* Make sure the footer spans the full width */
+    position: relative; /* Relative positioning */
+    bottom: 0; /* Stick to the bottom */
+}
+
+/* Footer content styling */
+.footer_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Footer text */
+.footer_content p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Footer links */
+.footer_links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.footer_links li {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.footer_links li:hover {
+    text-decoration: underline;
 }

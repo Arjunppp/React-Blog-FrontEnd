@@ -2,6 +2,8 @@ import './App.css';
 import { Input } from './components/input';
 import { BlogCard } from './components/blogCard';
 import { Intro } from './components/intro';
+import { Header } from './components/header';
+import { Footer } from './components/footer';
 import { useEffect, useState } from 'react';
 function App() {
 
@@ -22,12 +24,15 @@ function App() {
   return (
 
     <div className="App">
+      <Header />
       <Intro setViewing ={setViewing} setCreate ={setCreate} />
       {isCreate && <Input  setRender={setRender} setViewing={setViewing} setCreate ={setCreate}/>}
      {isViewing &&  todo.map((eachBlog) => 
     
     <BlogCard  key ={eachBlog._id} title={eachBlog.title} content={eachBlog.content} />
  )}
+
+      <Footer />
     </div>
   );
 }
